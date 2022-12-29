@@ -404,10 +404,13 @@ a.logo {
 
   padding: 8px 34px;
 
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
 
   color: var(--color-primary-black);
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
 
   transition: border-color var(--anim-main);
   outline: none;
@@ -443,10 +446,15 @@ textarea {
   padding: 8px 16px;
   margin: 0;
 
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
+ 
+
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
 
   color: var(--color-primary-black);
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
 
   resize: none;
   outline: none;
@@ -457,7 +465,6 @@ textarea::placeholder {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.16;
-
   letter-spacing: 0.01em;
 
   color: rgba(117, 117, 117, 0.5);
@@ -806,17 +813,18 @@ textarea:focus {
 
 .footer-field-area {
   width: 264px;
+  border-radius: 4px;
+
   background-color: inherit;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));  
   color: var(--color-primary-white);
+  
   outline: none;
 }
 
 .footer-field-area::placeholder {
-  font-weight: 400;
-  font-size: 12px;
+ 
   line-height: 2;
   letter-spacing: 0.04em;
 
@@ -834,7 +842,7 @@ textarea:focus {
 
   font-weight: 700;
   line-height: 1.5;
-   letter-spacing: 0.06em;
+  letter-spacing: 0.06em;
 
   border: 0;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
