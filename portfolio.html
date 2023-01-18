@@ -13,15 +13,17 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/mob-styles.css" />
   </head>
   <body>
     <header class="header">
       <div class="header-nav container">
         <nav class="main-nav">
           <a href="./index.html" class="logo"><span class="logo-web">WEB</span>STUDIO</a>
-          <ul class="nav-list list">
-            <li class="nav-item"><a class="link nav-link" href="./index.html">Studio</a></li>
+          <ul class="nav-list list is-hidden">
+            <li class="nav-item">
+              <a class="link nav-link" href="./index.html">Studio</a>
+            </li>
             <li class="nav-item">
               <a class="link nav-link current" href="./portfolio.html">Portfolio</a>
             </li>
@@ -29,7 +31,7 @@
           </ul>
         </nav>
 
-        <ul class="contact-list list">
+        <ul class="contact-list list is-hidden">
           <li class="contact-item">
             <a class="contact-info link" href="mailto:info@devstudio.com">info@devstudio.com</a>
           </li>
@@ -37,6 +39,11 @@
             <a class="contact-info link" href="tel:+11(000)1111111">+11 (000) 111-11-11</a>
           </li>
         </ul>
+        <button class="btn menu-btn js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="32px" height="32px" aria-label="Switcer of mobile menu">
+            <use class="header-icon-menu" href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -55,6 +62,7 @@
             <li class="filter-btns-item">
               <button type="button" class="btn filter-btn">App</button>
             </li>
+
             <li class="filter-btns-item">
               <button type="button" class="btn filter-btn">Design</button>
             </li>
@@ -68,9 +76,18 @@
                 <a href="#" class="content-link link">
                   <div class="content-thumb">
                     <img
-                      width="360"
-                      height="300"
-                      src="./images/photo-1-min.jpg"
+                      width="396"
+                      height="400"
+                      srcset="
+                        ./images/portfolio/mobile/img_mob@1x-1.jpg   396w,
+                        ./images/portfolio/mobile/img_mob@2x-1.jpg   792w,
+                        ./images/portfolio/tablet/img_tab@1x-1.jpg   356w,
+                        ./images/portfolio/tablet/img_tab@2x-1.jpg   712w,
+                        ./images/portfolio/desktop/img_desk@1x-1.jpg 360w,
+                        ./images/portfolio/desktop/img_desk@2x-1.jpg 720w
+                      "
+                      sizes="(min-width: 1200px) 360px, (min-width: 768px) 356px, (min-width: 480px) 396px, 100vw"
+                      src="./images/portfolio/mobile/img_mob@1x-1.jpg"
                       alt="Banking App Interface Concept"
                     />
                     <div class="content-overlay">
@@ -91,9 +108,18 @@
               <a href="#" class="content-link link">
                 <div class="content-thumb">
                   <img
-                    width="360"
-                    height="300"
-                    src="./images/photo-2-min.jpg"
+                    width="396"
+                    height="400"
+                    srcset="
+                      ./images/portfolio/mobile/img_mob@1x-2.jpg   396w,
+                      ./images/portfolio/mobile/img_mob@2x-2.jpg   792w,
+                      ./images/portfolio/tablet/img_tab@1x-2.jpg   356w,
+                      ./images/portfolio/tablet/img_tab@2x-2.jpg   712w,
+                      ./images/portfolio/desktop/img_desk@1x-2.jpg 360w,
+                      ./images/portfolio/desktop/img_desk@2x-2.jpg 720w
+                    "
+                    sizes="(min-width: 1200px) 360px, (min-width: 768px) 356px, (min-width: 480px) 396px, 100vw"
+                    src="./images/portfolio/mobile/img_mob@1x-2.jpg"
                     alt="Cashless Payment"
                   />
                   <div class="content-overlay">
@@ -114,9 +140,18 @@
               <a href="#" class="content-link link">
                 <div class="content-thumb">
                   <img
-                    width="360"
-                    height="300"
-                    src="./images/photo-3-min.jpg"
+                    width="396"
+                    height="400"
+                    srcset="
+                      ./images/portfolio/mobile/img_mob@1x-3.jpg   396w,
+                      ./images/portfolio/mobile/img_mob@2x-3.jpg   792w,
+                      ./images/portfolio/tablet/img_tab@1x-3.jpg   356w,
+                      ./images/portfolio/tablet/img_tab@2x-3.jpg   712w,
+                      ./images/portfolio/desktop/img_desk@1x-3.jpg 360w,
+                      ./images/portfolio/desktop/img_desk@2x-3.jpg 720w
+                    "
+                    sizes="(min-width: 1200px) 360px, (min-width: 768px) 356px, (min-width: 480px) 396px, 100vw"
+                    src="./images/portfolio/mobile/img_mob@1x-3.jpg"
                     alt=">Meditaion App"
                   />
                   <div class="content-overlay">
@@ -135,7 +170,21 @@
             <li class="content-item">
               <a href="#" class="content-link link">
                 <div class="content-thumb">
-                  <img width="360" height="300" src="./images/photo-4-min.jpg" alt="Taxi Service" />
+                  <img
+                    width="396"
+                    height="400"
+                    srcset="
+                      ./images/portfolio/mobile/img_mob@1x-4.jpg   396w,
+                      ./images/portfolio/mobile/img_mob@2x-4.jpg   792w,
+                      ./images/portfolio/tablet/img_tab@1x-4.jpg   356w,
+                      ./images/portfolio/tablet/img_tab@2x-4.jpg   712w,
+                      ./images/portfolio/desktop/img_desk@1x-4.jpg 360w,
+                      ./images/portfolio/desktop/img_desk@2x-4.jpg 720w
+                    "
+                    sizes="(min-width: 1200px) 360px, (min-width: 768px) 356px, (min-width: 480px) 396px, 100vw"
+                    src="./images/portfolio/mobile/img_mob@1x-4.jpg"
+                    alt="Taxi Service"
+                  />
                   <div class="content-overlay">
                     <p class="description">
                       14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
@@ -153,9 +202,18 @@
               <a href="#" class="content-link link">
                 <div class="content-thumb">
                   <img
-                    width="360"
-                    height="300"
-                    src="./images/photo-5-min.jpg"
+                    width="396"
+                    height="400"
+                    srcset="
+                      ./images/portfolio/mobile/img_mob@1x-5.jpg   396w,
+                      ./images/portfolio/mobile/img_mob@2x-5.jpg   792w,
+                      ./images/portfolio/tablet/img_tab@1x-5.jpg   356w,
+                      ./images/portfolio/tablet/img_tab@2x-5.jpg   712w,
+                      ./images/portfolio/desktop/img_desk@1x-5.jpg 360w,
+                      ./images/portfolio/desktop/img_desk@2x-5.jpg 720w
+                    "
+                    sizes="(min-width: 1200px) 360px, (min-width: 768px) 356px, (min-width: 480px) 396px, 100vw"
+                    src="./images/portfolio/mobile/img_mob@1x-5.jpg"
                     alt="Screen Illustrations"
                   />
                   <div class="content-overlay">
@@ -175,9 +233,18 @@
               <a href="#" class="content-link link">
                 <div class="content-thumb">
                   <img
-                    width="360"
-                    height="300"
-                    src="./images/photo-6-min.jpg"
+                    width="396"
+                    height="400"
+                    srcset="
+                      ./images/portfolio/mobile/img_mob@1x-6.jpg   396w,
+                      ./images/portfolio/mobile/img_mob@2x-6.jpg   792w,
+                      ./images/portfolio/tablet/img_tab@1x-6.jpg   356w,
+                      ./images/portfolio/tablet/img_tab@2x-6.jpg   712w,
+                      ./images/portfolio/desktop/img_desk@1x-6.jpg 360w,
+                      ./images/portfolio/desktop/img_desk@2x-6.jpg 720w
+                    "
+                    sizes="(min-width: 1200px) 360px, (min-width: 768px) 356px, (min-width: 480px) 396px, 100vw"
+                    src="./images/portfolio/mobile/img_mob@1x-6.jpg"
                     alt="Online Courses"
                   />
                   <div class="content-overlay">
@@ -197,9 +264,18 @@
               <a href="#" class="content-link link">
                 <div class="content-thumb">
                   <img
-                    width="360"
-                    height="300"
-                    src="./images/photo-7-min.jpg"
+                    width="396"
+                    height="400"
+                    srcset="
+                      ./images/portfolio/mobile/img_mob@1x-7.jpg   396w,
+                      ./images/portfolio/mobile/img_mob@2x-7.jpg   792w,
+                      ./images/portfolio/tablet/img_tab@1x-7.jpg   356w,
+                      ./images/portfolio/tablet/img_tab@2x-7.jpg   712w,
+                      ./images/portfolio/desktop/img_desk@1x-7.jpg 360w,
+                      ./images/portfolio/desktop/img_desk@2x-7.jpg 720w
+                    "
+                    sizes="(min-width: 1200px) 360px, (min-width: 768px) 356px, (min-width: 480px) 396px, 100vw"
+                    src="./images/portfolio/mobile/img_mob@1x-7.jpg"
                     alt="Instagram Stories Concept"
                   />
                   <div class="content-overlay">
@@ -218,7 +294,21 @@
             <li class="content-item">
               <a href="#" class="content-link link">
                 <div class="content-thumb">
-                  <img width="360" height="300" src="./images/photo-8-min.jpg" alt="Organic Food" />
+                  <img
+                    width="396"
+                    height="400"
+                    srcset="
+                      ./images/portfolio/mobile/img_mob@1x-8.jpg   396w,
+                      ./images/portfolio/mobile/img_mob@2x-8.jpg   792w,
+                      ./images/portfolio/tablet/img_tab@1x-8.jpg   356w,
+                      ./images/portfolio/tablet/img_tab@2x-8.jpg   712w,
+                      ./images/portfolio/desktop/img_desk@1x-8.jpg 360w,
+                      ./images/portfolio/desktop/img_desk@2x-8.jpg 720w
+                    "
+                    sizes="(min-width: 1200px) 360px, (min-width: 768px) 356px, (min-width: 480px) 396px, 100vw"
+                    src="./images/portfolio/mobile/img_mob@1x-8.jpg"
+                    alt="Organic Food"
+                  />
                   <div class="content-overlay">
                     <p class="description">
                       14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
@@ -235,7 +325,21 @@
             <li class="content-item">
               <a href="#" class="content-link link">
                 <div class="content-thumb">
-                  <img width="360" height="300" src="./images/photo-9-min.jpg" alt="Fresh Coffee" />
+                  <img
+                    width="396"
+                    height="400"
+                    srcset="
+                      ./images/portfolio/mobile/img_mob@1x-9.jpg   396w,
+                      ./images/portfolio/mobile/img_mob@2x-9.jpg   792w,
+                      ./images/portfolio/tablet/img_tab@1x-9.jpg   356w,
+                      ./images/portfolio/tablet/img_tab@2x-9.jpg   712w,
+                      ./images/portfolio/desktop/img_desk@1x-9.jpg 360w,
+                      ./images/portfolio/desktop/img_desk@2x-9.jpg 720w
+                    "
+                    sizes="(min-width: 1200px) 360px, (min-width: 768px) 356px, (min-width: 480px) 396px, 100vw"
+                    src="./images/portfolio/mobile/img_mob@1x-9.jpg"
+              2    alt="Fresh Coffee"
+                  />
                   <div class="content-overlay">
                     <p class="description">
                       14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
@@ -314,5 +418,76 @@
         </div>
       </div>
     </footer>
+    <!-- Mobile Menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button
+        class="menu-toggle js-close-menu btn"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg width="8px" height="8px" aria-label="Switcer of mobile menu">
+          <use class="header-icon-close" href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+
+      <ul class="list mobile-menu">
+        <li class="mobile-menu-item">
+          <a href="./index.html" class="link mobile-menu-link">Studio</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a href="./portfolio.html" class="link mobile-menu-link">Portfolio</a>
+        </li>
+        <li class="mobile-menu-item"><a href="" class="link mobile-menu-link">Contacts</a></li>
+      </ul>
+      <ul class="list mobile-contacts-list">
+        <li class="mobile-contacts-item">
+          <a href="tel:+11 (000) 111-11-11" class="accent link mobile-contacts-link"
+            >+11 (000) 111-11-11</a
+          >
+        </li>
+        <li class="mobile-contacts-item">
+          <a href="mailto:info@devstudio.com" class="link mobile-contacts-link"
+            >info@devstudio.com</a
+          >
+        </li>
+      </ul>
+      <ul class="list mobile-soc-list">
+        <li class="mobile-soc-item">
+          <a href="#" class="mobile-soc-link icon-link">
+            <svg class="mobile-soc-icon">
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="mobile-soc-item">
+          <a href="#" class="mobile-soc-link icon-link">
+            <svg class="mobile-soc-icon">
+              <use href="./images/icons.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="mobile-soc-item">
+          <a href="#" class="mobile-soc-link icon-link">
+            <svg class="mobile-soc-icon">
+              <use href="./images/icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="mobile-soc-item">
+          <a href="#" class="mobile-soc-link icon-link">
+            <svg class="mobile-soc-icon">
+              <use href="./images/icons.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

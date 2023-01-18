@@ -13,13 +13,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/mob-styles.css" />
   </head>
   <body>
     <header class="header">
       <div class="header-nav container">
         <nav class="main-nav">
           <a href="./index.html" class="logo"><span class="logo-web">WEB</span>STUDIO</a>
+
           <ul class="nav-list list">
             <li class="nav-item">
               <a class="link nav-link current" href="./index.html">Studio</a>
@@ -37,6 +38,11 @@
             <a class="contact-info link" href="tel:+11(000)1111111">+11 (000) 111-11-11</a>
           </li>
         </ul>
+        <button class="btn menu-btn js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="32px" height="32px" aria-label="Switcer of mobile menu">
+            <use class="header-icon-menu" href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -47,9 +53,17 @@
             Effective Solutions<br />
             for Your Business
           </h1>
-          <button type="button" class="hero-btn btn" data-modal-open>Order Service</button>
+          <button
+            type="button"
+            class="hero-btn btn"
+            aria-expanded="false"
+            aria-controls="modal"
+            data-modal-open
+          >
+            Order Service
+          </button>
         </div>
-        <div class="backdrop is-hidden" data-modal>
+        <div class="backdrop is-hidden" data-modal id="modal">
           <div class="modal">
             <form class="modal-form" name="modal_form" autocomplete="off">
               <strong class="modal-text title" id="contacts-form"
@@ -85,7 +99,7 @@
 
                 <label class="form-field"
                   ><span class="form-label">Comment</span
-                  ><textarea name="comment" placeholder="Text input"></textarea>
+                  ><textarea class="textarea" name="comment" placeholder="Text input"></textarea>
                 </label>
               </div>
 
@@ -95,11 +109,8 @@
                   <svg class="checkbox-icon-svg">
                     <use href="./images/icons.svg#icon-checkbox-active"></use>
                   </svg> </span
-                ><span class="checkbox-text">I accept the terms and conditions of the&nbsp;</span><a
-                  href="#"
-                  class="link checkbox-link"
-                  >Privacy Policy</a
-                >
+                ><span class="checkbox-text">I accept the terms and conditions of the&nbsp;</span
+                ><a href="#" class="link checkbox-link">Privacy Policy</a>
               </label>
               <button type="submit" class="btn modal-send-btn">Send</button>
             </form>
@@ -125,7 +136,8 @@
               </div>
               <h3 class="features-name name">Strategy</h3>
               <p class="features-text description">
-                Our goal is to identify the business problem to walk away with the perfect and
+                Our goal is to identify the business
+                <span class="features-text-space">problem to walk away with the perfect and</span>
                 creative solution.
               </p>
             </li>
@@ -161,7 +173,10 @@
               </div>
               <h3 class="features-name name">Technologies</h3>
               <p class="features-text description">
-                Design practice focused on digital experiences. We bring forth a deep passion for
+                Design practice focused on digital
+                <span class="features-text-space"
+                  >experiences. We bring forth a deep passion for</span
+                >
                 problem-solving.
               </p>
             </li>
@@ -171,16 +186,16 @@
 
       <section class="product section">
         <div class="container">
-          <h2 class="title">What are we doing</h2>
+          <h2 class="title product-title">What are we doing</h2>
           <ul class="product-list list">
             <li class="product-item">
-              <img width="360" height="300" src="./images/monitor.jpg" alt="monitor" />
+              <img width="360" height="300" srcset="./images/product/monitor@1x.jpg 1x, ./images/product/monitor@2x.jpg 2x" src="./images/monitor@1x.jpg" alt="monitor" />
             </li>
             <li class="product-item">
-              <img width="360" height="300" src="./images/phones.jpg" alt="phones" />
+              <img width="360" height="300" srcset="./images/product/app@1x.jpg 1x, ./images/product/app@2x.jpg 2x" src="./images/product/app@1x.jpg" alt="phones" />
             </li>
             <li class="product-item">
-              <img width="360" height="300" src="./images/smartphone.jpg" alt="smartphone" />
+              <img width="360" height="300" srcset="./images/product/phone@1x.jpg 1x, ./images/product/phone@2x.jpg 2x" src="./images/product/phone@1x.jpg" alt="smartphone" />
             </li>
           </ul>
         </div>
@@ -188,10 +203,10 @@
 
       <section class="team section">
         <div class="container">
-          <h2 class="title">Our Team</h2>
+          <h2 class="team-title title">Our Team</h2>
           <ul class="team-list list">
             <li class="team-item">
-              <img width="264" height="260" src="./images/mark_guerrero.jpg" alt="Mark Guerrero" />
+              <img width="264" height="260" srcset=".\images\team\img@1x-1.jpg 1x, .\images\team\img@2x-1.jpg 2x" src=".\images\team\img@1x-1.jpg" alt="Mark Guerrero" />
               <div class="team-thumb">
                 <h3 class="name">Mark Guerrero</h3>
                 <p class="description">Product Designer</p>
@@ -229,7 +244,7 @@
               </div>
             </li>
             <li class="team-item">
-              <img width="264" height="260" src="./images/tom_ford.jpg" alt="Tom Ford" />
+              <img width="264" height="260" srcset=".\images\team\img@1x-2.jpg 1x, .\images\team\img@2x-2.jpg 2x" src=".\images\team\img@1x-2.jpg" alt="Tom Ford" />
               <div class="team-thumb">
                 <h3 class="name">Tom Ford</h3>
                 <p class="description">Frontend Developer</p>
@@ -267,7 +282,7 @@
               </div>
             </li>
             <li class="team-item">
-              <img width="264" height="260" src="./images/camila_garcia.jpg" alt="Camila Garcia " />
+              <img width="264" height="260" srcset=".\images\team\img@1x-3.jpg 1x, .\images\team\img@2x-3.jpg 2x" src=".\images\team\img@1x-3.jpg" alt="Camila Garcia " />
               <div class="team-thumb">
                 <h3 class="name">Camila Garcia</h3>
                 <p class="description">Marketing</p>
@@ -305,7 +320,7 @@
               </div>
             </li>
             <li class="team-item">
-              <img width="264" height="260" src="./images/daniel_wilson.jpg" alt="Daniel Wilson" />
+              <img width="264" height="260" srcset=".\images\team\img@1x-4.jpg 1x, .\images\team\img@2x-4.jpg 2x" src=".\images\team\img@1x-4.jpg" alt="Daniel Wilson" />
               <div class="team-thumb">
                 <h3 class="name">Daniel Wilson</h3>
                 <p class="description">UI Designer</p>
@@ -348,7 +363,7 @@
 
       <section class="customers section">
         <div class="container">
-          <h2 class="title">Customers</h2>
+          <h2 class="title customers-title">Customers</h2>
           <ul class="customers-list list">
             <li class="customers-item logo-yaco">
               <a href="#" class="customers-icon-link icon-link">
@@ -457,6 +472,78 @@
         </div>
       </div>
     </footer>
+    <!-- Mobile Menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button
+        class="menu-toggle js-close-menu btn"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg width="8px" height="8px" aria-label="Switcer of mobile menu">
+          <use class="header-icon-close" href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+
+      <ul class="list mobile-menu">
+        <li class="mobile-menu-item">
+          <a href="./index.html" class="link mobile-menu-link">Studio</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a href="./portfolio.html" class="link mobile-menu-link">Portfolio</a>
+        </li>
+        <li class="mobile-menu-item"><a href="" class="link mobile-menu-link">Contacts</a></li>
+      </ul>
+      <ul class="list mobile-contacts-list">
+        <li class="mobile-contacts-item">
+          <a href="tel:+11 (000) 111-11-11" class="accent link mobile-contacts-link"
+            >+11 (000) 111-11-11</a
+          >
+        </li>
+        <li class="mobile-contacts-item">
+          <a href="mailto:info@devstudio.com" class="link mobile-contacts-link"
+            >info@devstudio.com</a
+          >
+        </li>
+      </ul>
+      <ul class="list mobile-soc-list">
+        <li class="mobile-soc-item">
+          <a href="#" class="mobile-soc-link icon-link">
+            <svg class="mobile-soc-icon">
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="mobile-soc-item">
+          <a href="#" class="mobile-soc-link icon-link">
+            <svg class="mobile-soc-icon">
+              <use href="./images/icons.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="mobile-soc-item">
+          <a href="#" class="mobile-soc-link icon-link">
+            <svg class="mobile-soc-icon">
+              <use href="./images/icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="mobile-soc-item">
+          <a href="#" class="mobile-soc-link icon-link">
+            <svg class="mobile-soc-icon">
+              <use href="./images/icons.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
