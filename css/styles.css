@@ -568,6 +568,18 @@ a.logo {
   }
 }
 
+@media screen and (orientation: landscape), (max-height: 550px) {
+  .backdrop {
+    overflow-y: auto;
+  }
+
+  .modal {
+    top:2%;
+
+    transform: translateX(-50%);
+  }
+}
+
 @media screen and (min-width: 768px) {
   .modal {
     min-width: 408px;
